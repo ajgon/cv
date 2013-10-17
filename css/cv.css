@@ -481,16 +481,26 @@ dl, dt, dd {
     padding: 0 1cm;
 }
 
-.wrapper {
-    width: 21cm;
-    margin: 0 auto;
+.both {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 1cm;
+    clear: both;
 }
 
-.wrapper > header {
+.page {
+    width: 21cm;
+    margin: 0 auto;
     overflow: hidden;
 }
 
-.wrapper > header {
+.page > header {
+    overflow: hidden;
+}
+
+.page > header {
     margin: 1.5cm 1.0cm 1.0cm;
     border: solid 1px #c7c9c8;
     border-radius: 7px;
@@ -498,7 +508,7 @@ dl, dt, dd {
     padding: 0.8cm 0.5cm 0.8cm 1cm;
 }
 
-.wrapper > header img {
+.page > header img {
     display: block;
     width: 3.5cm;
     height: 3.5cm;
@@ -509,50 +519,50 @@ dl, dt, dd {
     margin-right: 0.5cm;
 }
 
-.wrapper > header .basics {
+.page > header .basics {
     width: 6.5cm;
     float: left;
     border-right: solid 1px #838383;
     padding: 0 0.5cm 0.35cm 0;
 }
 
-.wrapper > header h1 {
+.page > header h1 {
     font-size: 0.8cm;
     font-family: 'HelveticaLTStd-BlkCond', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     color: #233d4a;
 }
 
-.wrapper > header h2 {
+.page > header h2 {
   color: #a0a0a0;
   font-size: 0.4cm;
 }
 
-.wrapper > header h2 i {
+.page > header h2 i {
     color: #233d4c;
     font-size: 0.8cm;
 }
 
-.wrapper > header h3 {
+.page > header h3 {
     color: #0f86ae;
     margin: -0.15cm 0 0;
 }
 
-.wrapper > header p {
+.page > header p {
   color: #a0a0a0;
   font-size: 11px;
 }
 
-.wrapper .contact {
+.page .contact {
   float: left;
   margin: 0.1cm 0 0 0.4cm;
 }
 
-.wrapper .contact i {
+.page .contact i {
   margin-right: 0.2cm;
 }
 
-.wrapper section h2 {
+.page section h2 {
     font-size: 0.8cm;
     line-height: 0.8cm;
     font-family: 'HelveticaLTStd-BlkCond', Helvetica, Arial, sans-serif;
@@ -560,104 +570,166 @@ dl, dt, dd {
     margin-bottom: 0.5cm;
 }
 
-.wrapper .left section h2 i {
+.page .left section h2 i {
     width: 1.3cm;
     display: inline-block;
     text-align: center;
 }
 
-.wrapper .right section h2 i {
+.page .right section h2 i {
     width: 0.9cm;
     display: inline-block;
 }
 
-.wrapper .right .icon-pencil {
-    color: #f7f9f8;
+.page h2 .icon-check-empty {
+    visibility: hidden;
 }
 
-.wrapper .left h2 .icon-cog {
+.page .left h2 .icon-cog {
     color: #0c86af;
 }
 
-.wrapper section {
-    margin-bottom: 0.5cm;
+.page section {
+    margin-bottom: 0.7cm;
 }
 
-.wrapper section dt {
+.page section dt {
     float: left;
     width: 1.3cm;
     font-size: 0.4cm;
 }
 
-.wrapper section dd {
+.page section dd {
     overflow: hidden;
 }
 
-.wrapper section dd i {
+.page section dd i {
     display: inline-block;
     margin: 0;
     width: 0.4cm;
     color: #a0a0a0;
 }
 
-.wrapper section dd cite,
-.wrapper section dd p {
+.page section dd cite,
+.page section dd p {
     margin-left: 0.4cm;
 }
 
-.wrapper section dd cite {
+.page section dd cite {
     font-style: normal;
     color: #a0a0a0;
 }
 
-.wrapper .left dl {
+.page .left dl {
     margin: 0 0 0.3cm -1cm;
     padding-left: 0.8cm;
     border-left: solid 0.2cm #263d4d;
 }
 
-.wrapper .left h2 + dl + dl,
-.wrapper .left h2 + dl + dl + dl,
-.wrapper .left h2 + dl + dl + dl + dl {
+.page .work h2 + dl + dl,
+.page .work h2 + dl + dl + dl,
+.page .work h2 + dl + dl + dl + dl {
     border-left-color: #0c87a9;
 }
 
-.wrapper .left h2 + dl + dl + dl + dl + dl {
+.page .work h2 + dl + dl + dl + dl + dl {
     border-left-color: #848484;
 }
 
-.wrapper .left h2 + dl + dl + dl + dl + dl + dl{
+.page .work h2 + dl + dl + dl + dl + dl + dl{
     border-left-color: #d3d3d3;
 }
 
-.wrapper .skills {
+.page .projects h2 + dl + dl + dl + dl + dl {
+    border-left-color: #0c87a9;
+}
+
+.page .projects h2 + dl + dl + dl + dl + dl + dl {
+    border-left-color: #848484;
+}
+
+.page .projects h2 + dl + dl + dl + dl + dl + dl + dl,
+.page .projects h2 + dl + dl + dl + dl + dl + dl + dl + dl,
+.page .projects h2 + dl + dl + dl + dl + dl + dl + dl + dl + dl {
+    border-left-color: #d3d3d3;
+}
+
+.page .skills {
     margin-left: 1cm;
 }
 
-.wrapper .skills li {
+.page .skills li {
     margin-bottom: 0.1cm;
 }
 
-.wrapper .skills .icon-cog {
+.page .skills .icon-cog {
     color: #a0a0a0;
 }
 
-.wrapper .skills .icon-hl {
+.page .skills .icon-hl {
     color: #0c86af;
 }
 
-.wrapper .skills span {
+.page .skills span {
     display: inline-block;
     width: 3cm;
 }
 
-.wrapper footer {
+.page .icons {
+    overflow: hidden;
+}
+
+.page .icons li {
+    float: left;
+    margin-right: 0.4cm;
+    text-align: center;
+}
+
+.page .icons i {
+    font-size: 1cm;
+    margin: 0 0 0.2cm;
+    display: block;
+    color: #0f86ae;
+}
+
+.page .list li {
+    overflow: hidden;
+    margin-bottom: 0.3cm;
+}
+
+.page .list a {
+    display: block;
+    float: left;
+    width: 1.8cm;
+}
+
+.page .list span {
+    display: block;
+    overflow: hidden;
+    text-indent: -0.8em;
+    padding-left: 1em;
+}
+
+.page footer {
     clear: both;
     padding: 0 1cm;
-    page-break-after: always;
+}
+
+.page .print {
+    display: none;
 }
 
 /* print */
-@page {
-  margin: 0;
+@media print {
+    @page {
+      margin: 0;
+    }
+
+    .page {
+        page-break-after: always;
+    }
+
+    .page .print {
+        display: block;
+    }
 }
