@@ -53,6 +53,31 @@ template {
     display: none;
 }
 
+body.masked .mask {
+    background: #000;
+    color: #000;
+    position: relative;
+    filter: brightness(0);
+}
+
+body.masked .mask:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    z-index: 100;
+}
+
+body.masked h1.mask + h3 {
+    margin-top: 0;
+}
+
 /* ==========================================================================
    Base
    ========================================================================== */
@@ -470,6 +495,9 @@ dl, dt, dd {
 .icon-github-sign {
     color: #000;
 }
+.icon-key {
+    color: #ff6f21;
+}
 
 .left,
 .right {
@@ -734,8 +762,13 @@ dl, dt, dd {
     body {
         background: none;
     }
+    .page .header {
+        padding-top: 1.5cm;
+        background: #fff;
+    }
     .page .header header {
         background: #fff;
+        margin-top: 0;
     }
     @page {
       margin: 0;
