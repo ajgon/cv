@@ -629,10 +629,17 @@ dl, dt, dd {
     margin-bottom: 0.7cm;
 }
 
+.page section.work dl,
+.page section.education dl {
+    min-height: 1.5cm;
+}
+
 .page section dt {
     float: left;
     width: 1.3cm;
     font-size: 0.4cm;
+    word-spacing: 1.3cm;
+    text-align: center;
 }
 
 .page section dd {
@@ -656,7 +663,8 @@ dl, dt, dd {
     color: #a0a0a0;
 }
 
-.page .left dl {
+.page .left dl,
+.page .education dl {
     margin: 0 0 0.3cm -1cm;
     padding-left: 0.8cm;
     border-left: solid 0.2cm #263d4d;
@@ -664,15 +672,20 @@ dl, dt, dd {
 
 .page .work h2 + dl + dl,
 .page .work h2 + dl + dl + dl,
-.page .work h2 + dl + dl + dl + dl {
+.page .work h2 + dl + dl + dl + dl,
+.page .education h2 + dl + dl,
+.page .education h2 + dl + dl + dl,
+.page .education h2 + dl + dl + dl + dl {
     border-left-color: #0c87a9;
 }
 
-.page .work h2 + dl + dl + dl + dl + dl {
+.page .work h2 + dl + dl + dl + dl + dl,
+.page .education h2 + dl + dl + dl + dl + dl {
     border-left-color: #848484;
 }
 
-.page .work h2 + dl + dl + dl + dl + dl + dl{
+.page .work h2 + dl + dl + dl + dl + dl + dl,
+.page .education h2 + dl + dl + dl + dl + dl + dl{
     border-left-color: #d3d3d3;
 }
 
@@ -717,7 +730,7 @@ dl, dt, dd {
 
 .page .icons li {
     float: left;
-    margin-right: 0.4cm;
+    margin: 0 0.4cm 0.4cm 0;
     text-align: center;
 }
 
